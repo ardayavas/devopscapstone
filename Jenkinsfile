@@ -28,7 +28,7 @@ pipeline {
 
                 script {
                     docker.withRegistry("https://028605923698.dkr.ecr.us-west-2.amazonaws.com", "ecr:us-west-2:ardacicd") {
-                        def customImage = docker.build("udacityproject")
+                        def customImage = docker.build("udacityproject:rolling2")
                         customImage.push() 
                     }
                 }
