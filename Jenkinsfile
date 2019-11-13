@@ -23,7 +23,7 @@ pipeline {
                 pylint --disable=R,C app.py"""
             }
         }
-        stage('Docker Stages') {
+        stage('Push Docker Image to ECR') {
             steps{
 
                 script {
@@ -32,6 +32,17 @@ pipeline {
                         customImage.push() 
                     }
                 }
+            }
+        }
+        stage('Bring Up Docker Image on EKS') {
+            steps{
+                sh "aws eks update-kubeconfig --name CapstoneEKS"
+                sh "kubectl get svc"
+                sh "kubectl apply -f aws/aws-auth-cm.yaml"
+                sh "kubectl apply -f aws/app.yml"
+                sh "kubectl get pods"
+                sh "kubectl apply -f aws/app-service.yml"
+                sh "kubectl get svc"
             }
         }
     }
