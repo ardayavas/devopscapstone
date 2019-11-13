@@ -37,12 +37,12 @@ pipeline {
         stage('Bring Up Docker Image on EKS') {
             steps{
                 sh "aws eks update-kubeconfig --name CapstoneEKS"
-                sh "kubectl get svc"
-                sh "kubectl apply -f aws/aws-auth-cm.yaml"
-                sh "kubectl apply -f aws/app.yml"
-                sh "kubectl get pods"
-                sh "kubectl apply -f aws/app-service.yml"
-                sh "kubectl get svc"
+                sh "~/bin/kubectl get svc"
+                sh "~/bin/kubectl apply -f aws/aws-auth-cm.yaml"
+                sh "~/bin/kubectl apply -f aws/app.yml"
+                sh "~/bin/kubectl get pods"
+                sh "~/bin/kubectl apply -f aws/app-service.yml"
+                sh "~/bin/kubectl get svc"
             }
         }
     }
