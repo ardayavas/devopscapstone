@@ -1,0 +1,18 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "CapstoneProject"
+    },
+    {
+        "ParameterKey": "KeyPairName",
+        "ParameterValue": "ardatest"
+    },
+    {
+        "ParameterKey": "ClusterName",
+        "ParameterValue": "CapstoneEKS"
+    },
+    {
+        "ParameterKey": "NodeGroupName",
+        "ParameterValue": "CapstoneNodeGroup"
+    }
+]
