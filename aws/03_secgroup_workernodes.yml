@@ -174,7 +174,7 @@ Resources:
   NodeGroup:
     Type: "AWS::AutoScaling::AutoScalingGroup"
     Properties:
-      DesiredCapacity: 4
+      DesiredCapacity: 3
       LaunchConfigurationName: !Ref NodeLaunchConfig
       MaxSize: 4
       MinSize: 1

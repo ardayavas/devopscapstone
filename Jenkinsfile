@@ -28,7 +28,7 @@ pipeline {
 
                 script {
                     docker.withRegistry("https://028605923698.dkr.ecr.us-west-2.amazonaws.com", "ecr:us-west-2:ardacicd") {
-                        def customImage = docker.build("udacityproject:rolling2")
+                        def customImage = docker.build("udacityproject:rolling1")
                         customImage.push() 
                     }
                 }
@@ -39,7 +39,6 @@ pipeline {
                 sh "aws eks update-kubeconfig --name CapstoneEKS"
                 sh "~/bin/kubectl get svc"
                 sh "~/bin/kubectl apply -f aws/aws-auth-cm.yaml"
-                sh "~/bin/kubectl set image deployment.apps/udacitycapstoneapp udacitycapstoneapp=028605923698.dkr.ecr.us-west-2.amazonaws.com/udacityproject:latest"
                 sh "~/bin/kubectl apply -f aws/app.yml"
                 sh "~/bin/kubectl get pods"
                 sh "~/bin/kubectl apply -f aws/app-service.yml"
