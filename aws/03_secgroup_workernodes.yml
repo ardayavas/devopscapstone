@@ -174,7 +174,7 @@ Resources:
   NodeGroup:
     Type: "AWS::AutoScaling::AutoScalingGroup"
     Properties:
-      DesiredCapacity: 3
+      DesiredCapacity: 4
       LaunchConfigurationName: !Ref NodeLaunchConfig
       MaxSize: 4
       MinSize: 1
@@ -191,7 +191,7 @@ Resources:
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: "1"
-        MinInstancesInService: 3
+        MinInstancesInService: 4
         PauseTime: PT5M
 
 Outputs:
