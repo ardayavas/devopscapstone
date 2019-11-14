@@ -21,7 +21,7 @@ spec:
         app: udacitycapstoneapp
     spec:
       containers:
-      - image: 028605923698.dkr.ecr.us-west-2.amazonaws.com/udacityproject:rolling1
+      - image: 028605923698.dkr.ecr.us-west-2.amazonaws.com/udacityproject:rolling2
         imagePullPolicy: Always
         name: udacitycapstoneapp
         ports:
