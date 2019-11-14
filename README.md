@@ -33,4 +33,4 @@ This project deploys infrastructure, security groups, EKS service and performs C
 * Jenkinsfile checks depentencies for linting, Docker, AWS-CLI and kubectl; then performs building, linting, docker push, creates pods running the application, creates load balancer and watches rollout steps.
 * ```app.py``` is the service application, running on flask.
 * Dockerfile contains necessary steps to build docker image.
-* kube/* files are used to initialize worker role for kubectl, referance to the ECR image with rolling deployment strategy and load balancer. 
+* kube/* files are used to initialize worker role for kubectl, reference to the ECR image with rolling deployment strategy and load balancer. 
