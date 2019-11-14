@@ -38,10 +38,10 @@ pipeline {
             steps{
                 sh "aws eks update-kubeconfig --name CapstoneEKS"
                 sh "~/bin/kubectl get svc"
-                sh "~/bin/kubectl apply -f aws/aws-auth-cm.yaml"
-                sh "~/bin/kubectl apply -f aws/app.yml"
+                sh "~/bin/kubectl apply -f kube/aws-auth-cm.yaml"
+                sh "~/bin/kubectl apply -f kube/app.yml"
                 sh "~/bin/kubectl get pods"
-                sh "~/bin/kubectl apply -f aws/app-service.yml"
+                sh "~/bin/kubectl apply -f kube/app-service.yml"
                 sh "~/bin/kubectl get svc"
                 sh "~/bin/kubectl rollout status -w deployment.apps/udacitycapstoneapp"
             }
