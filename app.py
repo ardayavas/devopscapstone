@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World, my name is Arda Yavas - Rolling 1'
+    return 'Hello World, my name is Arda Yavas - Rolling 2'
 
 if __name__ == "__main__": # pragma: no cover
     log.info("START Flask")
