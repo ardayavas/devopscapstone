@@ -6,6 +6,8 @@ pipeline {
                 sh "docker -v"
                 sh "hadolint -v"
                 sh "pylint --version"
+                sh "aws --version"
+                sh "~/bin/kubectl version"
             }
         }
         stage('Build'){
