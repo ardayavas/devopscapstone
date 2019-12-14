@@ -4,7 +4,7 @@ This project deploys infrastructure, security groups, EKS service and performs C
 
 ### 1. Clone Project
 
-* ```git clone https://github.com/ardayavas/devopscapstone.git```
+* ```git clone https://github.com/ardayavas/eksproject.git```
 
 ### 1. Create Infrastructure, Security Groups and EKS Service
 
