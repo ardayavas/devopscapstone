@@ -1,5 +1,3 @@
-# Udacity Capstone Project
-
 This project deploys infrastructure, security groups, EKS service and performs Ci/Cd steps via Jenkins
 
 ## Installation
